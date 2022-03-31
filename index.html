@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+ 
+  <head>
+  
+  
+   <!----------------- Meta ----------------->	
+   <meta charset="utf-8">
+   
+      
+   <!----------------- Title ----------------->	
+    <title>BMW</title>
+	
+	
+   <!----------------- Links ----------------->	
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> <!-- Google-Fonts Link(Columns) --->
+	
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> <!-- Google-Fonts Link(Controls) ---> 
+	
+	<link rel="stylesheet" href="css.css"> <!-- Css-Datei Link --->
+	
+	
+	<!----------------- Script ----------------->	
+	 <script>
+	  <!----------------- Variablen ----------------->
+	   
+	   var margin_nave = 0;
+	   
+	   var margin_navz = 0;
+	   
+	   var margin_navd = 0;
+	   
+	   var margin_navv = 0;
+	   
+	   var hnbe;
+	   
+	   var uhnbe;
+	   
+	   var hnbz;
+	   
+	   var uhnbz;
+	   
+	   var hnbd;
+	   
+	   var uhnbd;
+	   
+	   var hnbv;
+	   
+	   var uhnbv;
+	   
+	   var sliderstatus = "rightslider";
+	   
+	   var links = 0;
+	   
+	   var controls_height = 0;
+	   
+	   var ac;
+	   
+	   var deac;
+	   
+	   var ab;
+	   
+	   var deab;
+	   
+	   var af;
+	   
+	   var deaf;
+	   
+	   var visibility_controls = 0;
+	   
+	   var visibility_fonts = 0;
+	   
+	   var margin_control_font = 0;
+
+	   var ligne_height = 0;
+	   
+	   var button_width = 0;
+	   
+	   var button_height = 0;
+	   
+	   var button_border_radius = 0;
+	   
+	   var button_right = 0;
+	   
+	   var button_bottom = 0;
+	   
+	   var hlg;
+	   
+	   var uhlg;
+	   
+	  <!----------------- Navi-Hover0 ----------------->
+	   
+	  	function hovernavboxeins(){
+		  clearTimeout(uhnbe)
+		  if(margin_nave < 4){
+		    margin_nave = margin_nave + 0.1
+			document.getElementById("nav_box1").style.marginTop = (7-margin_nave)+"px"  
+            hnbe = setTimeout(hovernavboxeins)			
+		  }
+		}
+		
+	  	function unhovernavboxeins(){
+		  clearTimeout(hnbe)
+		  if(margin_nave >= 0){
+		    margin_nave = margin_nave - 0.1
+			document.getElementById("nav_box1").style.marginTop = (7-margin_nave)+"px"  
+            uhnbe = setTimeout(unhovernavboxeins)			
+		  }
+		}	  
+		
+	  	function hovernavboxzwei(){
+		  clearTimeout(uhnbz)
+		  if(margin_navz < 4){
+		    margin_navz = margin_navz + 0.1
+			document.getElementById("nav_box2").style.marginTop = (7-margin_navz)+"px"  
+            hnbz = setTimeout(hovernavboxzwei)			
+		  }
+		}
+		
+	  	function unhovernavboxzwei(){
+		  clearTimeout(hnbz)
+		  if(margin_navz >= 0){
+		    margin_navz = margin_navz - 0.1
+			document.getElementById("nav_box2").style.marginTop = (7-margin_navz)+"px"  
+            uhnbz = setTimeout(unhovernavboxzwei)			
+		  }
+		}	 
+		
+	  	function hovernavboxdrei(){
+		  clearTimeout(uhnbd)
+		  if(margin_navd < 4){
+		    margin_navd = margin_navd + 0.1
+			document.getElementById("nav_box3").style.marginTop = (7-margin_navd)+"px"  
+            hnbd = setTimeout(hovernavboxdrei)			
+		  }
+		}
+		
+	  	function unhovernavboxdrei(){
+		  clearTimeout(hnbd)
+		  if(margin_navd >= 0){
+		    margin_navd = margin_navd - 0.1
+			document.getElementById("nav_box3").style.marginTop = (7-margin_navd)+"px"  
+            uhnbd = setTimeout(unhovernavboxdrei)			
+		  }
+		}	 
+		
+	  	function hovernavboxvier(){
+		  clearTimeout(uhnbv)
+		  if(margin_navv < 4){
+		    margin_navv = margin_navv + 0.1
+			document.getElementById("nav_box4").style.marginTop = (7-margin_navv)+"px"  
+            hnbv = setTimeout(hovernavboxvier)			
+		  }
+		}
+		
+	  	function unhovernavboxvier(){
+		  clearTimeout(hnbv)
+		  if(margin_navv >= 0){
+		    margin_navv = margin_navv - 0.1
+			document.getElementById("nav_box4").style.marginTop = (7-margin_navv)+"px"  
+            uhnbv = setTimeout(unhovernavboxvier)			
+		  }
+		}	 
+	  
+	  <!----------------- Navi-Hover1 ----------------->
+	  
+	  
+	  <!----------------- Slider ----------------->
+		<!--var zahl1 = 4;
+		//var zahl2 = 5;
+		//var zahl3 = 6;
+		//var zahl4 = 8;
+	  // function addieren(x,y){
+		//	var zwischenergebnis = x + y;
+		//	subtrahieren(zwischenergebnis,zahl3);
+		//	return 0;
+	   //} 
+	   
+	   //function subtrahieren(x,y){
+		//	var ergebnis = x - y;
+		//	return alert(ergebnis);
+	   //} 
+	   //addieren(zahl1,zahl2)
+	   
+	  <!----------------- Controls0 ----------------->
+
+	   
+	   <!----------------- Activate Controls ----------------->
+	    
+	    function activatecontrols(){
+		  clearTimeout(deac)
+		  clearTimeout(deab)
+		  clearTimeout(deaf)
+		  if(visibility_controls <= 0.7){
+		    visibility_controls = visibility_controls + 0.05
+			document.getElementById("control_div").style.opacity = visibility_controls + 0.3
+		    document.getElementById("left").style.opacity = visibility_controls + 0.3
+		    document.getElementById("play_pause").style.opacity = visibility_controls + 0.3
+		    document.getElementById("right").style.opacity = visibility_controls + 0.3
+		  }
+		  if(controls_height <= 26){
+		    controls_height = controls_height + 1
+		    document.getElementById("mini_head").style.height = (controls_height+357)+"px"
+	        document.getElementById("control_div").style.height = (controls_height+10)+"px" 
+		  }
+		  if(ligne_height <= 3){
+		    ligne_height = ligne_height + 0.1
+		    document.getElementById("control_ligne").style.height = (ligne_height + 0)+"px"
+		  }
+		  if(controls_height == 13){
+		    ab = setTimeout(activatebuttons,10)
+		  }
+		  if((ligne_height >= 3)&&(visibility_controls >= 0.7)&&(controls_height >= 26)){
+		    clearTimeout(ac)
+		  }else{	
+			ac = setTimeout(activatecontrols,20)
+		  }
+	    }
+
+	    <!----------------- Activate Buttons ----------------->
+
+	     function activatebuttons(){ 
+		   if(button_height < 25){
+			 button_height = button_height + 1
+			 document.getElementById("button_animation1").style.height = (button_height + 0)+"px"
+			 document.getElementById("left").style.height = (0 + button_height)+"px"
+			 document.getElementById("button_animation2").style.height = (button_height + 0)+"px"
+			 document.getElementById("play_pause").style.height = (0 + button_height)+"px"
+			 document.getElementById("button_animation3").style.height = (button_height)+"px"
+			 document.getElementById("right").style.height = (0 + button_height)+"px"
+		   }
+		   if(button_height == 25){
+			 if(button_width < 60){
+			   button_width = button_width + 1
+			   document.getElementById("controls").style.width = (button_width*3+150)+"px"
+	           document.getElementById("button_animation1").style.width = (button_width+50)+"px"
+			   document.getElementById("left").style.width = (button_width+30)+"px"
+			   document.getElementById("button_animation2").style.width = (button_width+50)+"px"
+		       document.getElementById("play_pause").style.width = (button_width+30)+"px"
+			   document.getElementById("button_animation3").style.width = (button_width+50)+"px"
+		       document.getElementById("right").style.width = (button_width+30)+"px"
+			 }
+			 if(button_width >= 30){
+			   if(button_border_radius > -8){
+		         button_border_radius = button_border_radius - 0.2
+			     document.getElementById("left").style.borderRadius = (button_border_radius+8)+"px"
+		         document.getElementById("play_pause").style.borderRadius = (button_border_radius+8)+"px" 
+		         document.getElementById("right").style.borderRadius = (button_border_radius+8)+"px"
+		       }
+			 }  
+		   }
+
+		   if((button_border_radius >= -8)&&(button_width == 60)&&(button_height == 25)){
+			 document.getElementById("left_hider1").style.opacity = 1
+			 document.getElementById("left_hider2").style.opacity = 1
+			 document.getElementById("left_hider3").style.opacity = 1
+			 document.getElementById("right_hider1").style.opacity = 1
+			 document.getElementById("right_hider2").style.opacity = 1
+			 document.getElementById("right_hider3").style.opacity = 1
+			 clearTimeout(ab)
+			 setTimeout(activatefonts,0) 	
+		   }else{
+		     ab = setTimeout(activatebuttons,5)
+		   }
+		 }
+		
+		<!----------------- Activate Fonts ----------------->
+		
+	     function activatefonts(){
+           if(visibility_fonts < 1){
+		     visibility_fonts = visibility_fonts + 0.1
+		     document.getElementById("control_button_left_font").style.opacity = (visibility_fonts + 0)
+			 document.getElementById("control_button_play_pause_font").style.opacity = (visibility_fonts + 0)
+			 document.getElementById("control_button_right_font").style.opacity = (visibility_fonts + 0)
+		   }
+		   
+		   if(visibility_fonts >= 1){
+		     clearTimeout(ac)
+		   }else{
+		     ac = setTimeout(activatefonts,50)
+		   }
+		   
+	     }
+		
+	   <!----------------- Deactivate Controls ----------------->
+	    function deactivatecontrols(){
+		  setTimeout(deactivatebuttons,10)
+		  clearTimeout(ac)                                                                    <!--- Falls die Funktion activatecontrols parallel läuft, wird diese gestoppt --->
+		  clearTimeout(ab)                                                                    <!--- Falls die Funktion activatebuttons parallel läuft, wird diese gestoppt --->
+		  clearTimeout(af)                                                                    <!--- Falls die Funktion activatefonts parallel läuft, wird diese gestoppt --->
+		  if(controls_height == 0){
+		    clearTimeout(deac)
+		  }else{
+		    visibility_controls = visibility_controls - 0.05
+		    controls_height = controls_height - 1
+		    ligne_height = ligne_height - 0.2
+	        document.getElementById("left").style.opacity = visibility_controls + 0
+		    document.getElementById("play_pause").style.opacity = visibility_controls + 0
+		    document.getElementById("right").style.opacity = visibility_controls + 0
+		    document.getElementById("mini_head").style.height = (controls_height+357)+"px"
+	        document.getElementById("control_div").style.height = (controls_height+10)+"px"
+		    document.getElementById("control_div").style.opacity = visibility_controls+0.1
+		    document.getElementById("control_ligne").style.height = (ligne_height + 0)+"px"
+		    deac = setTimeout(deactivatecontrols,10)
+		  }
+		 
+	    }
+	   	
+	    <!----------------- Deactivate Buttons ----------------->
+		 function deactivatebuttons(){
+		   if(document.getElementById("left").style.width <= 20+"px"){
+             clearTimeout(deab)
+		   }else{
+		     button_width = button_width - 3.5
+			 button_border_radius = button_border_radius + 1
+			 document.getElementById("controls").style.width = (button_width*3+120)+"px"
+	         document.getElementById("left").style.width = (button_width+20)+"px"
+		     document.getElementById("play_pause").style.width = (button_width+20)+"px"
+		     document.getElementById("right").style.width = (button_width+20)+"px"
+			 document.getElementById("left").style.borderRadius = (button_border_radius+8)+"px"
+		     document.getElementById("play_pause").style.borderRadius = (button_border_radius+8)+"px"
+		     document.getElementById("right").style.borderRadius = (button_border_radius+8)+"px"
+			 deab = setTimeout(deactivatebuttons,20)
+		   }
+	     }
+
+		<!----------------- Deactivate Fonts ----------------->
+
+	     function deactivatefonts(){
+	         clearTimeout(af)
+		   if(button_width >= 70){
+		     clearTimeout(deaf)
+		   }else{
+			 
+			 if(button_border_radius == -6){  
+			 }else{
+			   document.getElementById("left").style.borderRadius = (button_border_radius+8)+"px"
+		       document.getElementById("play_pause").style.borderRadius = (button_border_radius+8)+"px"
+		       document.getElementById("right").style.borderRadius = (button_border_radius+8)+"px"
+			 }
+			 ab = setTimeout(activatebuttons,10)
+		   }
+	     }
+
+	  <!----------------- Controls1 ----------------->
+	  
+	  
+      <!----------------- Columns0 ----------------->
+	  
+	  function hoverloginbutton(){
+	    clearTimeout(uhlg)
+		if((button_right < 3)&&(button_bottom < 3)){
+		  button_right = button_right + 1
+		  button_bottom = button_bottom + 1
+		  document.getElementById("login_button").style.right = (button_right + 0)+"px"
+		  document.getElementById("login_button").style.bottom = (button_bottom + 0)+"px"
+		  hlg = setTimeout(hoverloginbutton,50)
+		}else{
+		  clearTimeout(hlg)
+		}
+	  }
+	  
+	  function unhoverloginbutton(){
+	    clearTimeout(hlg)
+		if((button_right > 0)&&(button_bottom > 0)){
+		  button_right = button_right - 1
+		  button_bottom = button_bottom - 1
+		  document.getElementById("login_button").style.right = (button_right + 0)+"px"
+		  document.getElementById("login_button").style.bottom = (button_bottom + 0)+"px"
+		  uhlg = setTimeout(unhoverloginbutton,50)
+		}else{
+		  clearTimeout(uhlg)
+		}
+	  }
+	  
+	  <!----------------- Columns1 ----------------->
+	  
+	 </script>
+	 
+	 
+  </head>
+  
+  <body>
+  
+    <div id="body">
+	
+     <!----------------- Header0 ----------------->                                    <!-- 0 = Anfang & 1 = Ende -->
+	 
+	  <div id="header">
+	 
+		<div id="nav">
+        <div align="center" id="nav_box1" onmouseover="hovernavboxeins()" onmouseleave="unhovernavboxeins()">Bla</div>
+		<div align="center" id="nav_box2" onmouseover="hovernavboxzwei()" onmouseleave="unhovernavboxzwei()">Bla</div>
+		<div align="center" id="nav_box3" onmouseover="hovernavboxdrei()" onmouseleave="unhovernavboxdrei()">Bla</div>
+		<div align="center" id="nav_box4" onmouseover="hovernavboxvier()" onmouseleave="unhovernavboxvier()">Bla</div>
+		</div> <!-- Schließt "nav" --->
+			
+	    <div id="mini_head" onmouseover="activatecontrols()" onmouseleave="deactivatecontrols()">
+		
+		  <div id="banner_support">
+	        <div id="div_banner">
+		      <div id="banner1" class="banner"></div>
+			  <div id="banner2" class="banner"></div>
+			  <div id="banner3" class="banner"></div>
+			  <div id="banner4" class="banner"></div>
+			  <div id="cloud_div"></div>
+	        </div> <!-- Schließt "banner" --->
+		  </div>
+		  
+		  <div id="control_div">
+		  
+		    <div id="control_ligne"></div>
+			<div id="controls">
+			  <div id="button_animation1" class="button_animation">
+			  
+			    <div id="right_hider1" class="right_hider"></div>
+				
+				<div class="margin_div">
+		          <div id="left" align="center" class="control_buttons"><div align="center" id="control_button_left_font">Left</div></div>
+				</div>
+			    
+				<div id="left_hider1" class="left_hider"></div>
+				
+			  </div>
+			  
+			  <div id="button_animation2" class="button_animation">
+			  
+			    <div id="right_hider2" class="right_hider"></div>
+				
+				<div class="margin_div">
+			      <div id="play_pause" align="center" class="control_buttons"><div align="center" id="control_button_play_pause_font">Play</div></div> 
+				</div>
+			    
+				<div id="left_hider2" class="left_hider"></div>
+				
+			  </div>
+			  
+			  <div id="button_animation3" class="button_animation">
+			  
+			    <div id="right_hider3" class="right_hider"></div>
+				
+				<div class="margin_div">
+			      <div id="right" align="center" class="control_buttons"><div align="center" id="control_button_right_font">Right</div></div>
+				</div>
+			    
+				<div id="left_hider3" class="left_hider"></div>
+				
+			  </div>
+			  
+			  <div id="clear_both"></div>
+			</div>
+			
+		  </div>
+		  
+		</div>
+		 
+		
+	  </div> <!-- Schließt "Header" --->
+	 
+     <!----------------- Header1 ----------------->
+	 
+	 
+	 <!----------------- Container0 ----------------->
+	 
+      <div id="container">
+	    
+		<div id="alpha_column1">
+		
+		  <div id="login_column">
+		    Anmelden
+		    <div id="login_img"></div>
+		  
+		      <div id="login">
+		    
+			    <form action="http//:gag-if.de">
+			      <input id="input_benutzername" name="Nutzername" type="text" size="15" maxlength="15" placeholder="Benutzername"> <br>
+			      <input id="input_passwort" name="Passwort" type="Password" size="15" maxlength="20" placeholder="Passwort">
+			    </form>
+				
+				<div align="right" id="login_div"><div id="login_shade" onmouseover="hoverloginbutton()" onmouseleave="unhoverloginbutton()"><div align="center" id="login_button"><font size="1">Login</font></div></div></div>
+		      </div>
+		
+		  </div> <!-- Schließt "login-column" --->
+		  
+		  <div align="left" id="alpha_column1_content">
+		     <font size="2">
+			   Weitere Informationen zum offiziellen Kraftstoffverbrauch, den offiziellen spezifischen CO2-Emissionen und dem Stromverbrauch neuer Personenkraftwagen können dem 'Leitfaden über den Kraftstoffverbrauch, die CO2-Emissionen und den Stromverbrauch neuer Personenkraftwagen' entnommen werden, der an allen Verkaufsstellen, bei der Deutschen Automobil Treuhand GmbH (DAT), Hellmuth-Hirth-Str. 1, 73760 Ostfildern-Scharnhausen, und unter einer Website erhältlich ist.
+			 </font>
+		  </div>
+		  
+		</div>
+		
+		<div id="alpha_column2">
+		
+	 <!----------------- 1.Spalte ----------------->
+	 
+	      <div id="column1" class="column">
+		  
+            <div class="background" id="background1">
+			
+		      <div id="column1_headline">
+			    <div id="headline_background_column1">
+		          <font size="4">Gewinnspiel</font>
+				</div>
+		      </div>
+			  
+			</div>  
+			
+			<div class="content" align="center">
+		      <img id="column_img1" class="column_img">
+		      <div class="column_text" align="center"><font size="2">Jetzt mitmachen und 6 Monate Fahrfreude oder einen attraktiven Monatsgewinn sichern.</font></div>
+			  <div align="right"><font size="2" class="column_details">Zum Gewinnspiel></font></div>
+			</div>
+		  
+		  </div> <!-- Schließt Column1 -->
+		
+		  <div id="column2" class="column">
+		  
+            <div class="background" id="background2">
+			
+		      <div class="headline">
+			    <div class="headline_background">
+		          <font size="4">Traumauto</font>
+				</div>
+		      </div>
+		  
+		    </div>
+		  
+			<div class="content" align="center">
+		      <img id="column_img2" class="column_img">
+		      <div class="column_text" align="center"><font size="2">Finden Sie heraus, welcher BMW am besten zu Ihnen passt.</font></div>
+			  <div align="right"><font size="2" class="column_details">Mehr erfahren></font></div>
+			</div>
+		  
+		  </div> <!-- Schließt Column2 -->
+		
+		  <div id="column3" class="column">
+		    
+			<div class="background" id="background3">
+			
+		      <div class="headline">
+			    <div class="headline_background">
+			      <font size="4">BMW Modell</font>
+				</div>
+			  </div>
+			
+			</div>
+			
+			<div class="content" align="center">
+		      <img id="column_img3" class="column_img">
+		      <div class="column_text" align="center"><font size="2">Konfigurieren Sie jetzt Ihr individuelles BMW Wunschmodell.</font></div>
+			  <div align="right"><font size="2" class="column_details">Jetzt konfigurieren></font></div>
+			</div>
+		
+		  </div> <!-- Schließt Column3 -->
+		
+	 <!----------------- Clear:both_1.Spalte ----------------->
+		 <div class="clear_both"></div>
+		 
+	 <!----------------- 2.Spalte ----------------->	  
+	 
+		  <div id="column4" class="column">
+            
+			<div class="background" id="background4">
+			
+			  <div id="column4_headline" class="headline">
+			    <div id="column4_headline_background" class="headline_background">
+		          <font size="4">Gebrauchtwagen</font>
+				</div>
+		      </div>
+			
+			</div>
+			
+			<div class="content" align="center">
+		      <img id="column_img4" class="column_img">
+		      <div class="column_text" align="center"><font size="2">Wir bringen Sie schnell und bequem zu Ihrem BMW Gebrauchtwagen.</font></div>
+			  <div align="right"><font size="2" class="column_details">Details ansehen></font></div>
+			</div>
+		
+		  </div> <!-- Schließt Column4 -->
+		  
+		  <div id="column5" class="column">
+            
+			<div class="background" id="background5">
+			
+			  <div class="headline">
+			    <div class="headline_background">
+		          <font size="4">Bla</font>
+				</div>
+		      </div>
+			
+			</div>
+			
+			<div class="content" align="center">
+		      <img id="column_img5" class="column_img">
+		      <div class="column_text" align="center">bliblablub</div>
+			  <div align="right"><font size="2" class="column_details">Details ansehen></font></div>
+			</div>
+		
+		  </div> <!-- Schließt Column5 -->
+		
+		  <div id="column6" class="column">
+            
+			<div class="background" id="background6">
+			
+			  <div class="headline">
+			    <div class="headline_background">
+		          <font size="4">Bla</font>
+				</div>
+		      </div>
+			
+			</div>
+			
+			<div class="content" align="center">
+		      <img id="column_img6" class="column_img">
+		      <div class="column_text" align="center">bliblablub</div>
+			  <div align="right"><font size="2" class="column_details">Details ansehen></font></div>
+			</div>
+		
+		  </div> <!-- Schließt Column6 -->
+		  
+		
+	    </div> <!-- Schließt alpha_column2 -->
+		
+	  </div> <!-- Schließt "Container" -->
+	  
+	 <!----------------- Container1 ----------------->
+	 
+	 </div> <!-- Schließt body -->
+	 
+	 <!----------------- Footer0 ----------------->
+	 
+	  <div id="footer">
+	    
+        <div id="innen_footer">
+		<div id="footer_buttons">
+		
+		  <div id="footer_button1" class="button" ></div>
+		  <div id="footer_button2" class="button"></div>
+	      
+		  <div class="clear_both"></div>
+		  
+		</div>
+		<div id="socialmedia">
+		  <div id="headline_socialmedia">Socialmeadia</div>
+		  <div id="socialmedia_icons">
+		    <div id="twitter"></div>
+		    <div id="facebook"></div>
+		    <div id="youtube"></div>
+		    <div id="googleplus"></div>
+	      </div>
+		</div>
+		
+		
+	   
+	    </div>
+	   
+	  </div>
+	 
+	 
+	 <!----------------- Footer1 ----------------->
+     
+	 
+      
+	<script>
+	
+	  setTimeout(rightslider,1000);
+	
+    </script>
+  
+  </body>
+  
+</html>
